@@ -1,0 +1,60 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  styles: ['h1{font-weight: bolder;}','p{color: green;}']
+})
+export class AppComponent {
+  // xyztitle = 'xyzmyapp';
+
+  // array = [1,2,3,4,5];
+
+  // fun() {
+  //   return this.array ;
+  // }
+
+  // obj = {name:"pratik",age:"12"};
+
+  // myname = "xyz";
+
+  // bclick(names) {
+  //   alert(names);
+  // }
+
+  // x = "";
+
+  // myEvent (eventval) {
+  //   this.x = eventval;
+  // }
+
+  // vname = "hello";
+
+  // disablei = true;
+
+  // enablei() {
+  //   this.disablei = false;
+  // }
+
+  // show = false;
+  // show1 = "yes";
+  // show2 = "red";
+
+  // color = "green";
+
+  // obj1 = [
+  //   {
+  //     name: "pratik",
+  //     age: 12
+  //   },
+  //   {
+  //     name: "pratik1",
+  //     age: 120
+  //   },
+  //   {
+  //     name: "pratik2",
+  //     age: 1200
+  //   }
+  // ];
+}

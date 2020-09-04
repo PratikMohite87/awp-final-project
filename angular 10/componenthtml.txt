@@ -1,0 +1,81 @@
+<!-- <h1>Hello World</h1>
+<app-login></app-login>
+<app-login2></app-login2>
+<app-user></app-user>
+
+<button (click) = 'bclick(myname)'>click here</button><br><br>
+
+<input type="text" #box1 (keyup) = 'myEvent(box1.value)' placeholder="keyup"><br><br>
+
+<input type="text" #box2 (keydown) = 'myEvent(box2.value)' placeholder="keydown"><br><br>
+
+<input type="text" #box3 (keyup.enter) = 'myEvent(box3.value)' placeholder="keyup.enter"><br><br>
+
+<input type="text" #box4 (blur) = 'myEvent(box4.value)' placeholder="blur"><br><br>
+
+<h1 style="background-color: aqua;" (mouseover) = "myEvent('mouseoverevent')">Try mouse over event</h1>
+
+<h1 style="background-color: red;" (mouseleave) = "myEvent('mouseleaveevent')">Try mouse leave event</h1><br><br>
+
+<input type="text" (keyup) = 'myEvent($event.target.value)'><br><br>
+
+<input type="text" #box5>
+<button (click) = "myEvent(box5.value)">get the textbox5 value</button><br><br>
+
+Property Binding Example
+<input type="text" [disabled] = disablei [value] = vname><br>
+interpolation Example  
+<input type="text" disabled = {{disablei}} value = {{vname}}><br>
+<button (click) = enablei()>click to enable</button><br><br>
+
+<div>{{x}}</div>
+
+<h1 *ngIf = "show else elseBlock">if statement worked</h1>
+ng-template is a virtual element and its contents are displayed only when needed (based on conditions). ng-template should be used along with structural directives like [ngIf],[ngFor],[NgSwitch] or custom structural directives
+<ng-template #elseBlock>    
+    <h1>else block worked</h1>
+</ng-template>
+
+if else / if{if..} else
+<h1 *ngIf = "show1 == 'yes'; then ifBlock else elseBlock">if statement worked</h1>
+<ng-template #ifBlock>    
+    <h1>nested if worked block worked</h1>
+</ng-template>
+<ng-template #elseBlock>    
+    <h1>else block worked</h1>
+</ng-template>
+
+if elseif
+<ng-template [ngIf] = "show2 == 'blue'">    
+    <h1>blue block worked</h1>
+</ng-template>
+<ng-template [ngIf] = "show2 == 'green'">    
+    <h1>green block worked</h1>
+</ng-template>
+<ng-template [ngIf] = "show2 == 'red'">    
+    <h1>red block worked</h1>
+</ng-template>
+
+switch case
+<div [ngSwitch] = "color">
+    <h1 style="background-color: red;" *ngSwitchCase = '"red"'>red</h1>
+    <h1 style="background-color: blue;" *ngSwitchCase = '"blue"'>blue</h1>
+    <h1 style="background-color: green;" *ngSwitchCase = '"green"'>green</h1>
+    <h1 style="background-color: gray;" *ngSwitchDefault>fefault</h1>
+</div>
+
+<div *ngFor = "let items of array">  
+    {{items}}
+</div>
+
+<table border="1px">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+    </tr>
+    <tr *ngFor = "let items of obj1">
+        <td>{{items.name}}</td>
+        <td>{{items.age}}</td>
+    </tr>
+</table> -->
+ -->

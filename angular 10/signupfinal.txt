@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row">
+        <div class="col-0 col-sm-8 col-md-8">
+            
+        </div>
+
+        <div class="col-12 col-sm-4 col-md-4">
+
+            <h1 class="text-center">Signup</h1>
+
+            <form #userForm = "ngForm" (ngSubmit) = "getValues(userForm.value)">
+
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter your name"  ngModel name = "fullname" #fullname = "ngModel" required>
+                </div>
+                <span *ngIf ="fullname.invalid && fullname.touched" class="error">*This field is required.</span>
+    
+                <div class="input-group flex-nowrap">
+                    <input type="email" email class="form-control" placeholder="Enter your email id" ngModel name = "email" #email = "ngModel" required>
+                </div>
+                <span *ngIf ="email.invalid && email.touched" class="error">*Email is invalid.</span>
+    
+                <div class="input-group flex-nowrap">
+                    <input type="text" minlength="4" class="form-control" placeholder="Set password" ngModel name = "password" #password = "ngModel" required>
+                </div>
+                <span *ngIf ="password.invalid && password.touched" class="error">*Password is invalid.</span>
+    
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Confirm password" ngModel name = "confirmpassword" #confirmpassword = "ngModel" required>
+                </div>
+                <span *ngIf ="boo == 'false' && confirmpassword.touched" class="error">*Password mismatch.</span>
+    
+                <button class="btn btn-secondary btn-lg btn-block">Signup</button>
+            </form>
+
+            
+            <div style="display: flex; justify-content: center; font-weight: bold; font-size: large;">OR</div>
+    
+            <button type="button" class="btn btn-secondary btn-lg btn-block" id="googlesign">Google Login</button>
+        </div>
+    </div>
+</div>
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myapp';
+  boo = 'true';
+
+  getValues(val) {
+    console.log(val);
+
+    if(val.password !== val.confirmpassword) {
+      this.boo = "false";
+    }
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-top: 15px;
+}
+
+.btn {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+#googlesign {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    /* background-color: rgb(255, 148, 148); */
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(136, 135, 135);
+}
+
+input.ng-invalid {
+    border-left: 2px solid red;
+}
+
+input.ng-valid {
+    border-left: 2px solid green;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}
